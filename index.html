@@ -1,87 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Homepage</title>
-    <link rel="stylesheet" href="styles.css">
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-section {
-    padding: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-    
+    <title>Responsive Grid Homepage</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; }
+        .header, .footer { text-align: center; padding: 1rem; background-color: #333; color: #fff; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
+        .grid-item { position: relative; }
+        .grid-item img { width: 100%; height: auto; }
+        .grid-item p { position: absolute; bottom: 10px; left: 10px; color: #fff; background-color: rgba(0, 0, 0, 0.5); padding: 5px; }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul id="navbar">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="home">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Discover my projects and experiences.</p>
-    </section>
+<div class="header">
+    <h1>Website Name</h1>
+    <p>Navigation Menu</p>
+</div>
 
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <p>Here are some of my projects:</p>
-        <ul>
-            <li><a href="#">Project 1</a></li>
-            <li><a href="#">Project 2</a></li>
-            <li><a href="#">Project 3</a></li>
-        </ul>
-    </section>
+<div class="grid-container">
+    <!-- Repeat for each item -->
+    <div class="grid-item">
+        <a href="link-to-new-page.html">
+            <img src="image-source.jpg" alt="Image description">
+            <p>Caption Name</p>
+        </a>
+    </div>
+    <!-- End Repeat -->
+</div>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Get in touch with me!</p>
-    </section>
+<div class="footer">
+    <p>Contact Information</p>
+</div>
 
-    <footer>
-        <p>&copy; 2024 My Portfolio</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
+

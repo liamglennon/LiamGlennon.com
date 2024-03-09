@@ -3,12 +3,34 @@
 <head>
     <title>Degenerate Engineering</title>
     <style>
-        <body> { margin: 0; font-family: Arial, sans-serif; }
+        @font-face {
+        font-family: 'aptos';
+        src: url('C:\Users\LIAMG\LiamGlennon.com\Fonts\aptos.ttf') format('truetype');}
+
+        body { margin: 0; font-family: aptos, sans-serif; }
         .header, .footer { text-align: center; padding: 1rem; background-color: #333; color: #fff; }
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
-        .grid-item { position: relative; }
+        .grid-container { display: grid; padding: 20px; gap: 20px; }
+
+        /* Default to 1 column layout */
+        .grid-container { grid-template-columns: repeat(1, 1fr); }
+
+        /* Medium screens (>=600px) - 2 columns layout */
+        @media (min-width: 600px) {
+            .grid-container { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        /* Large screens (>=900px) - 3 columns layout */
+        @media (min-width: 900px) {
+            .grid-container { grid-template-columns: repeat(3, 1fr); }
+        }
+
         .grid-item img { width: 100%; height: auto; }
-        .grid-item p { position: absolute; bottom: 10px; left: 10px; color: #fff; background-color: rgba(0, 0, 0, 0.5); padding: 5px; }
+        .grid-item p { padding: 5px; text-align: center; color: #333333; }
+
+        /* Remove underline from links */
+        .grid-item a { text-decoration: none; }
+        /* Additional style to change link color if needed */
+        .grid-item a { color: inherit; } /* Optional: makes the link color the same as the parent element */
     </style>
 </head>
 <body>
@@ -19,14 +41,44 @@
 </div>
 
 <div class="grid-container">
-    <!-- Repeat for each item -->
+    <!-- Repeat this item as needed to fill the grid -->
     <div class="grid-item">
         <a href="link-to-new-page.html">
             <img src="new facilities_Carousel.jpg" alt="Image description">
-        </a>
             <p>Caption Name</p>
+        </a>
     </div>
-    <!-- End Repeat -->
+    <div class="grid-item">
+        <a href="link-to-new-page.html">
+            <img src="new facilities_Carousel.jpg" alt="Image description">
+            <p>Caption Name</p>
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="link-to-new-page.html">
+            <img src="new facilities_Carousel.jpg" alt="Image description">
+            <p>Caption Name</p>
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="link-to-new-page.html">
+            <img src="new facilities_Carousel.jpg" alt="Image description">
+            <p>Caption Name</p>
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="link-to-new-page.html">
+            <img src="new facilities_Carousel.jpg" alt="Image description">
+            <p>Caption Name</p>
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="link-to-new-page.html">
+            <img src="new facilities_Carousel.jpg" alt="Image description">
+            <p>Caption Name</p>
+        </a>
+    </div>
+    <!-- Add more .grid-item as needed -->
 </div>
 
 <div class="footer">
@@ -35,4 +87,3 @@
 
 </body>
 </html>
-

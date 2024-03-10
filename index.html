@@ -7,7 +7,7 @@
         font-family: 'aptos';
         src: url('Fonts/aptos.ttf') format('truetype');}
 
-        body { margin: 0; font-family: aptos, sans-serif; }
+        body { margin: 0; font-family: 'aptos', sans-serif; }
         .header, .footer { text-align: center; padding: 1rem; background-color: #333; color: #fff; }
         .grid-container { display: grid; padding: 20px; gap: 20px; }
 
@@ -24,13 +24,45 @@
             .grid-container { grid-template-columns: repeat(3, 1fr); }
         }
 
-        .grid-item img { width: 100%; height: auto; }
+        .grid-item img { border: 5px; width: 100%; height: auto; border-radius: 10% ; }
         .grid-item p { padding: 5px; text-align: center; color: #333333; }
 
         /* Remove underline from links */
         .grid-item a { text-decoration: none; }
         /* Additional style to change link color if needed */
         .grid-item a { color: inherit; } /* Optional: makes the link color the same as the parent element */
+    
+          /* Cookie consent modal styles */
+          #cookieConsentModal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            left: 0; top: 0; width: 100%; height: 100%; /* Full width and height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            z-index: 2; /* Sit on top */
+        }
+        #cookieConsentModalContent {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+            z-index: 2;
+            position: relative;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    
     </style>
 </head>
 <body>
@@ -85,5 +117,20 @@
     <p>Contact Information</p>
 </div>
 
+<!-- Cookie Consent Modal -->
+<div id="cookieConsentModal">
+    <div id="cookieConsentModalContent">
+        <span class="close" onclick="document.getElementById('cookieConsentModal').style.display='none';">&times;</span>
+        <p>We use cookies to improve your experience on our site(and steal data). By continuing to use our site, you accept our use of cookies.</p>
+        <button onclick="document.getElementById('cookieConsentModal').style.display='none';">No Other Choice Buddy</button>
+    </div>
+</div>
+
+<script>
+window.onload = function() {
+    // Display the modal
+    document.getElementById('cookieConsentModal').style.display = 'block';
+}
+</script>
 </body>
 </html>

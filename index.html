@@ -24,8 +24,18 @@
             .grid-container { grid-template-columns: repeat(3, 1fr); }
         }
 
-        .grid-item img { border: 5px; width: 100%; height: auto; border-radius: 10% ; }
-        .grid-item p { padding: 5px; text-align: center; color: #333333; }
+        .grid-item img { border: 5px; 
+                        width: 100%;
+                        object-fit: cover; 
+                    }
+
+        .grid-item p { padding: 5px; text-align: center; color: #333333; transition: background-color 0.3s ease, color 0.3s ease;}
+        
+        .grid-item p:hover {
+            background-color: #333333;
+            color: #ffffff;
+            cursor: pointer;
+        }
 
         /* Remove underline from links */
         .grid-item a { text-decoration: none; }
@@ -121,7 +131,7 @@
 <div id="cookieConsentModal">
     <div id="cookieConsentModalContent">
         <span class="close" onclick="document.getElementById('cookieConsentModal').style.display='none';">&times;</span>
-        <p>We use cookies to improve your experience on our site(and steal data). By continuing to use our site, you accept our use of cookies.</p>
+        <p>We use cookies to improve your experience on our site(and your steal data). By continuing to use our site, you accept our use of cookies.</p>
         <button onclick="document.getElementById('cookieConsentModal').style.display='none';">No Other Choice Buddy</button>
     </div>
 </div>

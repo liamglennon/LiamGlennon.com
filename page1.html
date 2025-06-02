@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RF Test Dashboard Project</title>
+    <style>
+        @font-face {
+            font-family: 'aptos';
+            src: url('Fonts/aptos.ttf') format('truetype');
+        }
+        body {
+            font-family: 'aptos', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        section {
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+        .content {
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>RF Test Dashboard</h1>
+</header>
+
+<div class="content">
+    <section>
+        <h2>Project Overview</h2>
+        <p>This project presents a flexible RF Test Dashboard developed using <strong>Dash</strong> and <strong>Plotly</strong>. It simulates and controls RF hardware for antenna measurements, providing real-time spectrum analysis, signal generation, and polar plotting features. The app supports simulation mode and physical serial port control, making it versatile for lab and test environments.</p>
+    </section>
+
+    <section>
+        <h2>Key Features</h2>
+        <ul>
+            <li>Interactive signal spectrum and pattern plots.</li>
+            <li>Simulation mode for standalone operation.</li>
+            <li>Serial port control for real hardware connection.</li>
+            <li>CSV data upload for pattern measurements.</li>
+            <li>Real-time VSG frequency adjustments and motor control.</li>
+        </ul>
+    </section>
+
+    <section>
+    <h2>Sample Screenshots</h2>
+    <p><em>Below are example outputs from the RF Test Dashboard app, showcasing its features.</em></p>
+
+    <!-- Spectrum Analyzer Plot -->
+    <img src="SpectrumAnalyzerPlot.png" alt="Spectrum Graph Screenshot" style="border-radius: 10px; width: 100%; max-width: 800px;">
+    <p>This plot illustrates the real-time signal spectrum captured using the dashboard. The spectrum is analyzed for noise floor and signal peak clarity.</p>
+
+    <!-- Azimuth Pattern Plot -->
+    <img src="AzimuthPlot.png" alt="Pattern Plot Screenshot" style="border-radius: 10px; width: 100%; max-width: 800px;">
+    <p>The azimuth pattern showcases antenna measurement data, providing insight into beamwidth and directivity.</p>
+
+    <!-- Controls and Keypad -->
+    <img src="Controls.png" alt="Controls and Keypad Screenshot" style="border-radius: 10px; width: 100%; max-width: 800px;">
+    <p>The control panel allows interactive management of frequency generation, motor control, and simulation toggling, ensuring precise testing operations.</p>
+</section>
+
+
+    <section>
+        <h2>Technical Stack</h2>
+        <p>This project leverages the following technologies:</p>
+        <ul>
+            <li><strong>Python</strong> with Dash for the web application.</li>
+            <li><strong>Plotly</strong> for interactive graph visualizations.</li>
+            <li><strong>Pandas</strong> and <strong>Numpy</strong> for data handling.</li>
+            <li><strong>PySerial</strong> for serial communication with hardware.</li>
+        </ul>
+    </section>
+
+    <section>
+    <h2>Install and Run</h2>
+    <p>Install the required Python packages with:</p>
+    <div style="position: relative; background-color: #f6f8fa; border-radius: 6px; padding: 10px; font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;">
+        <pre id="install-code">pip install dash pandas numpy pyserial plotly</pre>
+        <button onclick="navigator.clipboard.writeText(document.getElementById('install-code').innerText)" style="position: absolute; top: 10px; right: 10px; background-color: #0366d6; color: white; border: none; border-radius: 4px; padding: 4px 8px; cursor: pointer;">Copy</button>
+    </div>
+
+    <p>Then run the app with:</p>
+    <div style="position: relative; background-color: #f6f8fa; border-radius: 6px; padding: 10px; font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;">
+        <pre id="run-code">python app.py</pre>
+        <button onclick="navigator.clipboard.writeText(document.getElementById('run-code').innerText)" style="position: absolute; top: 10px; right: 10px; background-color: #0366d6; color: white; border: none; border-radius: 4px; padding: 4px 8px; cursor: pointer;">Copy</button>
+    </div>
+</section>
+
+
+    <section>
+        <h2>Source Code</h2>
+        <p>The source code is organized with a main <code>app.py</code> file and a <code>requirements.txt</code> file for dependencies. Make sure to adjust the <code>CSV_PATH</code> in the code to point to your data files.</p>
+    </section>
+</div>
+
+</body>
+</html>

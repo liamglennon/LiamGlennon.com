@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Electroplating 3D Prints</title>
+    <style>
+        @font-face {
+            font-family: 'aptos';
+            src: url('Fonts/aptos.ttf') format('truetype');
+        }
+        body {
+            font-family: 'aptos', sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            padding: 2em;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        h2 {
+            color: #555;
+        }
+        section {
+            background: white;
+            padding: 1em;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2em;
+        }
+        .image-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+        .image-row img {
+            width: 48%;
+            border-radius: 10px;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Electroplating 3D Prints</h1>
+
+<section>
+    <h2>Introduction</h2>
+    <p>This project explores the fabrication of custom parabolic reflectors using 3D printing and copper electroplating. It combines the speed of additive manufacturing with precision metal finishing, offering a versatile pathway for rapid prototyping.</p>
+    <p>Each step, from CAD design to final assembly, was optimized to ensure structural integrity and high-quality RF performance. This blend of digital design and hands-on engineering showcases the potential of hybrid fabrication techniques.</p>
+</section>
+
+<section>
+    <h2>CAD Design</h2>
+    <p>The reflector was meticulously designed using CAD tools to replicate the contours of automotive headlight reflectors. Focused on achieving optimal directivity and feed alignment, the design balanced compactness with performance.</p>
+    <p>Exported STL files preserved intricate design details, ensuring printability and dimensional accuracy crucial for subsequent stages.</p>
+    <div class="image-row">
+        <img src="ImagesE3DP/CADGraphics.png" alt="CAD Graphics Overview">
+        <img src="ImagesE3DP/COTSand3Dprinted.png" alt="3D Printed vs COTS Comparison">
+    </div>
+</section>
+
+<section>
+    <h2>3D Printing</h2>
+    <p>The reflector was 3D printed using FDM technology with a 0.4 mm nozzle and 0.2 mm layer height. PLA filament was selected for its reliability and ease of post-processing, ensuring stable geometries and smooth surfaces.</p>
+    <p>Print orientation was carefully optimized to reduce visible layer lines, enhancing both aesthetic and functional qualities of the reflective surface.</p>
+    <div class="image-row">
+        <img src="ImagesE3DP/3d_printing_process.jpg" alt="FDM Printing in Progress">
+        <img src="ImagesE3DP/UpClose3Dprint.png" alt="Close-up of Printed Surface">
+    </div>
+</section>
+
+<section>
+    <h2>Post-Processing</h2>
+    <p>The printed parts underwent thorough sanding with fine-grit paper to remove surface irregularities, followed by cleaning with isopropyl alcohol to eliminate debris and oils. A degreasing bath ensured an ultra-clean surface for the next step.</p>
+    <p>Post-processing is critical to achieving a smooth, conductive surface, essential for high-quality electroplating and optimal RF performance.</p>
+    <div class="image-row">
+        <img src="ImagesE3DP/UpClose3Dprint.png" alt="Sanded Reflector">
+        <img src="ImagesE3DP/COTSand3Dprinted.png" alt="Reflector Post-Processing">
+    </div>
+</section>
+
+<section>
+    <h2>Conductive Coating and Electroplating</h2>
+    <p>A carbon-based conductive spray was evenly applied to the sanded surface, establishing an initial conductive path for copper electroplating. The plated layer, deposited in a CuSO₄ bath with sulfuric acid and chloride ions, achieved a thickness of 20–25 μm.</p>
+    <p>The reflector was mounted on a rotating jig to ensure uniform coverage. After plating, the part was rinsed and dried, resulting in a highly conductive, professional-grade surface ready for RF testing.</p>
+    <div class="image-row">
+        <img src="ImagesE3DP/electroplating_process.jpg" alt="Electroplating Process">
+        <img src="ImagesE3DP/antenna_photo.jpg" alt="Completed Antenna Assembly">
+    </div>
+</section>
+
+</body>
+</html>
